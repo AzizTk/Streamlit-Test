@@ -7,8 +7,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 
-# Configure settings for the app
-st.set_option('display.max_columns', None)
+
+pd.set_option('display.max_columns', None)
 st.set_option('display.max_rows', 500)
 st.set_option('display.expand_frame_repr', False)
 
