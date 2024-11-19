@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
+st.set_page_config(page_title="NASA C-MAPSS Data Explorer", layout="wide")
 
 
 pd.set_option('display.max_columns', None)
@@ -63,19 +64,19 @@ st.set_page_config(page_title="NASA C-MAPSS Data Explorer", layout="wide")
 datasets = {
     "FD001": {
         "description": "Train: 100, Test: 100, Conditions: ONE (Sea Level), Fault Modes: ONE (HPC Degradation)",
-        "image": "path_to_fd001_image.jpg"
+        "image": "download.png"
     },
     "FD002": {
         "description": "Train: 260, Test: 259, Conditions: SIX, Fault Modes: ONE (HPC Degradation)",
-        "image": "path_to_fd002_image.jpg"
+        "image": "download.png"
     },
     "FD003": {
         "description": "Train: 100, Test: 100, Conditions: ONE (Sea Level), Fault Modes: TWO (HPC, Fan Degradation)",
-        "image": "path_to_fd003_image.jpg"
+        "image": "download.png"
     },
     "FD004": {
         "description": "Train: 248, Test: 249, Conditions: SIX, Fault Modes: TWO (HPC, Fan Degradation)",
-        "image": "path_to_fd004_image.jpg"
+        "image": "download.png"
     }
 }
 
