@@ -9,8 +9,8 @@ from plotly.subplots import make_subplots
 
 
 pd.set_option('display.max_columns', None)
-st.set_option('display.max_rows', 500)
-st.set_option('display.expand_frame_repr', False)
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.expand_frame_repr', False)
 
 # Title of the app
 st.title("NASA Predictive Maintenance - RUL Analysis")
