@@ -90,7 +90,6 @@ datasets = {
 }
 
 # Create a title
-st.title("NASA C-MAPSS Data Explorer")
 
 # Display clickable images for each dataset
 selected_dataset = None
