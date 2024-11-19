@@ -45,7 +45,7 @@ st.write(df_train.head())
 # Display Correlation Heatmap
 st.subheader("Correlation Heatmap")
 corr_matrix = df_train.corr()
-sns.heatmap(corr_matrix, annot=True, cmap='RdYlBu', linewidths=0.2, linecolor='lightgrey')
+sns.heatmap(corr_matrix, annot=True, cmap='RdYlBu', linewidths=0.8, linecolor='lightgrey')
 st.pyplot(plt)
 
 # Plotting with Plotly
