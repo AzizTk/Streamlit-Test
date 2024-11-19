@@ -54,4 +54,49 @@ fig = make_subplots(rows=1, cols=1)
 fig.add_trace(go.Scatter(x=df_train['cycle'], y=df_train['(Fan inlet temperature) (◦R)'], mode='lines', name='Fan Inlet Temp'))
 fig.update_layout(title='Cycle vs Fan Inlet Temperature')
 st.plotly_chart(fig)
+import streamlit as st
+
+# Set the page title and layout
+st.set_page_config(page_title="NASA C-MAPSS Data Explorer", layout="wide")
+
+# Define the datasets and their descriptions
+datasets = {
+    "FD001": {
+        "description": "Train: 100, Test: 100, Conditions: ONE (Sea Level), Fault Modes: ONE (HPC Degradation)",
+        "image": "path_to_fd001_image.jpg"
+    },
+    "FD002": {
+        "description": "Train: 260, Test: 259, Conditions: SIX, Fault Modes: ONE (HPC Degradation)",
+        "image": "path_to_fd002_image.jpg"
+    },
+    "FD003": {
+        "description": "Train: 100, Test: 100, Conditions: ONE (Sea Level), Fault Modes: TWO (HPC, Fan Degradation)",
+        "image": "path_to_fd003_image.jpg"
+    },
+    "FD004": {
+        "description": "Train: 248, Test: 249, Conditions: SIX, Fault Modes: TWO (HPC, Fan Degradation)",
+        "image": "path_to_fd004_image.jpg"
+    }
+}
+
+# Create a title
+st.title("NASA C-MAPSS Data Explorer")
+
+# Display clickable images for each dataset
+selected_dataset = None
+col1, col2, col3, col4 = st.columns(4)
+
+for i, (key, value) in enumerate(datasets.items()):
+    with [col1, col2, col3, col4][i]:
+        if st.button(f"{key}"):
+            selected_dataset = key
+        st.image(value["image"], caption=key, use_column_width=True)
+
+# Render the selected dataset details
+if selected_dataset:
+    st.header(f"Dataset: {selected_dataset}")
+    st.write(datasets[selected_dataset]["description"])
+    st.markdown("---")
+    st.subheader(f"Exploration for {selected_dataset}")
+    # Add your logic to display details about the dataset (e.g., data, plots, etc.)
 
