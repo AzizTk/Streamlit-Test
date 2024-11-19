@@ -1,4 +1,8 @@
 import streamlit as st
+
+
+st.set_page_config(page_title="NASA C-MAPSS Data Explorer", layout="wide")
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -6,13 +10,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
-# Importing required libraries
-import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
 
-# This must come immediately after imports and before any Streamlit calls
-st.set_page_config(page_title="NASA C-MAPSS Data Explorer", layout="wide")
 
 # Your app's logic starts here
 st.title("NASA C-MAPSS Data Explorer")
