@@ -16,9 +16,9 @@ st.set_option('display.expand_frame_repr', False)
 st.title("NASA Predictive Maintenance - RUL Analysis")
 
 # Load the dataset
-df_train = pd.read_csv('/kaggle/input/nasa-cmaps/CMaps/train_FD001.txt', sep='\s+', header=None)
-df_test = pd.read_csv('/kaggle/input/nasa-cmaps/CMaps/test_FD001.txt', sep='\s+', header=None)
-df_test_RUL = pd.read_csv('/kaggle/input/nasa-cmaps/CMaps/RUL_FD001.txt', sep='\s+', header=None)
+df_train = pd.read_csv('Cmaps/train_FD001.txt', sep='\s+', header=None)
+df_test = pd.read_csv('Cmaps/test_FD001.txt', sep='\s+', header=None)
+df_test_RUL = pd.read_csv('Cmaps/RUL_FD001.txt', sep='\s+', header=None)
 
 # Feature names for the dataset
 index_names = ['engine', 'cycle']
